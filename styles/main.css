@@ -1,8 +1,23 @@
 :root {
   --primary-color: #7b051b;
-  --primary-font-regular: "Sofia Pro", sans-serif;
-  --primary-font-light: "Sofia Pro Light", sans-serif;
-  --secondary-font: "MonarchaW01-Book", sans-serif;
+  --primary-font-regular: "Sofiapro", sans-serif;
+  --primary-font-bold: "Sofiabold", sans-serif;
+  --secondary-font: "Monarcha", sans-serif;
+}
+
+@font-face {
+  font-family: Monarcha;
+  src: url("../assets/fonts/Monarcha.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Sofiapro;
+  src: url("../assets/fonts/Sofiapro.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Sofiabold;
+  src: url("../assets/fonts/Sofiabold.otf") format("opentype");
 }
 
 /* General Styles */
@@ -99,6 +114,7 @@ nav ul .quote {
 nav ul .quote a {
   color: #ffffff;
   height: 20px;
+  font-family: var(--primary-font-bold);
 }
 
 /* Hero Section */
@@ -149,7 +165,7 @@ p {
   font-size: 24px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-family: var(--primary-font-light);
+  font-family: var(--primary-font-regular);
   margin-top: 44px;
   font-weight: 300;
 }
@@ -173,7 +189,7 @@ p {
 
 .hero .hero-text p {
   font-size: 16px;
-  font-family: var(--primary-font-light);
+  font-family: var(--primary-font-regular);
   font-weight: 300;
   line-height: 28px;
 }
@@ -203,7 +219,7 @@ h4 {
 }
 
 .section-one .row .col h4 {
-  font-family: var(--primary-font-light);
+  font-family: var(--primary-font-regular);
   text-transform: uppercase;
 }
 
@@ -218,7 +234,7 @@ h4 {
 .section-one .row .col p,
 li {
   font-size: 14px;
-  font-family: var(--primary-font-light);
+  font-family: var(--primary-font-regular);
   margin-bottom: 24px;
 }
 
@@ -245,7 +261,7 @@ li {
 }
 
 .section-one .row .col button {
-  font-family: var(--primary-font-regular);
+  font-family: var(--primary-font-bold);
   border: none;
   background-color: var(--primary-color);
   color: #ffffff;
@@ -282,6 +298,10 @@ li {
   padding: 24px 42px;
 }
 
+.section-two .product-info {
+  font-family: var(--primary-font-regular);
+}
+
 .section-two .product-info h2 {
   font-size: 34px;
   line-height: 38px;
@@ -293,12 +313,11 @@ li {
 
 .section-two .product-info p {
   font-size: 14px;
-  font-family: var(--primary-font-light);
   margin: 12px 0;
 }
 
 .section-two .product-info button {
-  font-family: var(--primary-font-regular);
+  font-family: var(--primary-font-bold);
   border: none;
   background-color: var(--primary-color);
   color: #ffffff;
@@ -326,10 +345,11 @@ li {
 
 .section-two .product-range ul li h5 {
   color: #7b051b;
-  font-family: var(--primary-font-regular);
+  font-family: var(--primary-font-bold);
   font-size: 14px;
   text-transform: capitalize;
   margin: 0;
+  font-weight: bold;
 }
 
 /* Footer */
@@ -513,6 +533,10 @@ footer .legal ul li {
   nav .navbar-toggler {
     top: 4px;
     right: 8px;
+  }
+
+  .hero .hero-text {
+    padding: 24px;
   }
 
   .hero .hero-text h3 {
