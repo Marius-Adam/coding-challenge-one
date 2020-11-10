@@ -62,7 +62,7 @@ nav .navbar-toggler {
   border: none;
   background: none;
   cursor: pointer;
-  font-size: 32px;
+  font-size: 42px;
   display: none;
   color: var(--primary-color);
 }
@@ -113,19 +113,21 @@ nav ul .quote {
 
 nav ul .quote a {
   color: #ffffff;
-  height: 20px;
   font-family: var(--primary-font-bold);
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  height: 350px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero img {
   width: 100%;
-  height: 380px;
+  height: 480px;
   object-fit: cover;
   position: absolute;
   top: -24px;
@@ -137,7 +139,7 @@ nav ul .quote a {
   top: -24px;
   left: 0;
   width: 100%;
-  height: 380px;
+  height: 480px;
   display: block;
   background: rgba(0, 0, 0, 0.25);
   z-index: 2;
@@ -166,7 +168,6 @@ p {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-family: var(--primary-font-regular);
-  margin-top: 44px;
   font-weight: 300;
 }
 
@@ -209,7 +210,7 @@ p {
 }
 
 .section-one .row .col img {
-  margin: 16px 0 16px 0;
+  margin: 16px 0 32px 0;
 }
 
 .section-one .row .col h2,
@@ -359,7 +360,6 @@ footer {
   height: auto;
   min-height: 380px;
   background: #7b051b;
-  padding: 16px 10px;
 }
 
 footer .contact-info {
@@ -417,7 +417,7 @@ footer .legal p {
   text-transform: uppercase;
   font-family: var(--primary-font-regular);
   font-size: 12px;
-  margin-top: 4rem;
+  margin-top: 84px;
 }
 
 footer .legal ul {
@@ -455,13 +455,14 @@ footer .legal ul li {
     display: flex;
     flex-direction: column;
     transition: all ease-in-out 0.5s;
+    padding: 16px;
   }
 
   nav .navbar-toggler {
-    display: block;
+    display: flex;
     position: absolute;
     top: 8px;
-    right: 16px;
+    right: 0;
   }
 
   nav ul li {
@@ -486,18 +487,24 @@ footer .legal ul li {
     padding: 0;
   }
 
+  .hero {
+    height: 80vh;
+  }
+
   .hero img {
-    top: -14px;
+    top: 0;
+    height: 75vh;
   }
 
   .hero .overlay {
-    top: -14px;
+    top: 0;
+    height: 75vh;
   }
 }
 
 @media only screen and (max-width: 940px) {
   .section-one {
-    padding: 16px 0px;
+    padding: 0px 0px 48px;
   }
 
   .section-two .product-range img {
@@ -505,7 +512,11 @@ footer .legal ul li {
   }
 
   .section-two .product-showcase {
-    padding: 16px;
+    padding: 16px 16px 48px;
+  }
+
+  .section-two .product-range ul {
+    padding: 16px 0;
   }
 
   .section-one .row,
@@ -517,43 +528,36 @@ footer .legal ul li {
     text-align: center;
   }
 
+  footer .contact-info {
+    margin-top: 0px;
+  }
+
   footer .legal ul {
     padding: 0;
     justify-content: center;
     align-items: center;
     display: flex;
   }
+
+  footer .container .social-links,
+  footer .legal p {
+    margin-top: 24px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
   nav .logo {
-    width: 140px;
+    width: 68%;
+    margin-right: 0;
   }
 
   nav .navbar-toggler {
-    top: 4px;
-    right: 8px;
+    top: 24px;
+    right: 0px;
   }
 
   .hero .hero-text {
     padding: 24px;
-  }
-
-  .hero .hero-text h3 {
-    font-size: 15px;
-  }
-  .hero .hero-text h1 {
-    font-size: 30px;
-  }
-
-  .section-one .row .col h2,
-  .section-two .product-info h2,
-  .section-one .row .col h3 {
-    font-size: 26px;
-  }
-
-  .section-one .row .col h3 {
-    margin-top: 28px;
   }
 
   .hero .hero-text hr {
@@ -562,6 +566,25 @@ footer .legal ul li {
 
   .hero .hero-text p {
     font-size: 14px;
+  }
+
+  .section-one .row .col h3 {
+    margin-top: 28px;
+  }
+
+  .section-two .images {
+    flex-direction: column;
+    justify-content: normal;
+  }
+
+  .section-two .images img:first-of-type,
+  .section-two .images img:last-of-type {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .section-two .images .inner-images {
+    display: none;
   }
 
   .section-two .product-range ul li {
